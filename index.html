@@ -886,7 +886,7 @@
   <!-- Hero Section -->
   <section class="hero" id="home">
     <div class="profile-img-container animate-left">
-      <img src="https://i.imgur.com/0Yb8LpF.jpeg" alt="Ritesh Poudel" class="profile-img">
+      <img src="SnapInsta.to_447543466_18093915730425159_6174046939195271089_n.jpg" alt="Ritesh Poudel" class="profile-img">
     </div>
     <div class="hero-content animate-right">
       <h1>Ritesh Poudel</h1>
@@ -918,8 +918,7 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-images">
-        <img src="https://i.imgur.com/0Yb8LpF.jpeg" alt="Ritesh Poudel" class="about-img" onclick="openModal(this.src)">
-        <img src="https://i.imgur.com/u3rJ9XP.jpeg" alt="Ritesh at Yale Tournament" class="about-img" onclick="openModal(this.src)">
+       <img src="SnapInsta.to_485836430_18123546718425159_2499650408961764660_n.jpg" alt="Ritesh at Yale Tournament" class="about-img" onclick="openModal(this.src)">
       </div>
       <div class="about-text animate-up">
         <p>
@@ -1307,7 +1306,20 @@
             <i class="fas fa-paper-plane"></i> Send Message
           </button>
         </form>
-        <p style="color: var(--text); font-size: 0.9rem; text-align: center; margin-top: 25px;">
+        <p style="color: var(--text); font-size: 0.9rem; text-align: center; margin-top: 25px; /* Neon Glow Effect */
+.profile-img, .about-img, .experience-card, .video-card {
+  box-shadow: 0 0 25px rgba(100,255,218,0.6),
+              0 0 60px rgba(100,255,218,0.3);
+}
+
+.hero h1 {
+  text-shadow: 0 0 20px #64ffda, 0 0 40px #64ffda;
+}
+
+.section-title {
+  text-shadow: 0 0 15px #64ffda;
+}
+">
           I typically respond within 24-48 hours for professional inquiries
         </p>
       </div>
@@ -1317,6 +1329,7 @@
   <!-- Footer -->
   <footer>
     <div class="footer-content">
+      <div class="gif-bg"></div>
       <div class="footer-logo">Ritesh Poudel</div>
       <p class="footer-tagline">
         Bridging diplomacy and technology to create sustainable solutions for global challenges. 
@@ -1515,5 +1528,16 @@
       });
     });
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  window.onload = () => {
+    confetti({
+      particleCount: 250,
+      spread: 180,
+      origin: { y: 0.6 },
+      colors: ['#64ffda', '#ff6b6b', '#ffffff']
+    });
+  };
+</script>
 </body>
 </html>
